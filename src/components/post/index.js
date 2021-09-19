@@ -6,6 +6,7 @@ import { Comment } from '../comment';
 import { CommentForm } from '../comment-form/comment-form';
 import { addComment, like } from '../../api/posts';
 import { useState } from 'react';
+import { PostDescription } from '../post-description';
 
 const CLASS_NAME = 'Post';
 const cn = classnames.bind(styles);
@@ -38,21 +39,11 @@ export const Post = ({ post }) => {
     like(post.id);
   };
 
-  const handleComment = () => {
-    setState({ ...state, showForm: true });
-  };
+  const handleComment = () => setState({ ...state, showForm: true });
 
-  const handleCloseForm = () => {
-    setState({ ...state, showForm: false });
-  };
+  const handleCloseForm = () => setState({ ...state, showForm: false });
 
-  const handleShowComments = () => {
-    setState({ ...state, showComments: true });
-  };
-
-  const handleShowFull = () => {
-    setState({ ...state, showFull: true });
-  };
+  const handleShowComments = () => setState({ ...state, showComments: true });
 
   return (
     <div className={cn(CLASS_NAME)}>
@@ -64,15 +55,7 @@ export const Post = ({ post }) => {
       </div>
       {/*<p className={cn(`${CLASS_NAME}__views`)}>Просмотры: {views}</p>*/}
       <p className={cn(`${CLASS_NAME}__views`)}>Нравится: {likes}</p>
-      <p className={cn(`${CLASS_NAME}__content`)}>
-        {content}{' '}
-        <span
-          className={cn(`${CLASS_NAME}__show-more`)}
-          onClick={handleShowFull}
-        >
-          Ещё
-        </span>
-      </p>
+      <PostDescription content={content} />
       {comments.length > 0 && !showComments && (
         <p
           className={cn(`${CLASS_NAME}__show-comments`)}

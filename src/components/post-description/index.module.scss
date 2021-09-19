@@ -1,0 +1,22 @@
+.Post-description {
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 18px;
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &--full {
+      white-space: unset;
+      overflow: auto;
+      text-overflow: unset;
+    }
+  }
+
+  &__show-full {
+    color: #8c8c8c;
+    cursor: pointer;
+  }
+}
