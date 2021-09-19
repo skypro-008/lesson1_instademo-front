@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import {getPosts} from "./api/posts";
+import {useEffect, useState} from "react";
+import {Header} from "./components/header";
+import {Post} from "./components/post";
+import {Layout} from "./components/layout";
+import classnames from 'classnames/bind';
+import styles from './App.scss';
+
+const CLASS_NAME = 'App';
+const cn = classnames.bind(styles);
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [state, setState] = useState([]);
+
+    useEffect(() => {
+        (async () => {
+            const {data} = await getPosts();
+            setState(data);
+        })();
+    }, []);
+
+    return (
+        <div className={cn(CLASS_NAME)}>
+            <Layout>
+                <Header/>
+
+                <div className={cn(`${CLASS_NAME}__posts-list`)}>
+                    {state.map(post => <Post post={post} key={post.id}/>)}
+                </div>
+            </Layout>
+        </div>
+    );
 }
 
 export default App;

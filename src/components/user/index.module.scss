@@ -1,0 +1,14 @@
+.User {
+  margin: 8px 0;
+
+  &__avatar {
+    background: #87d068
+  }
+
+  &__name {
+    margin-left: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+  }
+}
