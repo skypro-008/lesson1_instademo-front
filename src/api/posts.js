@@ -1,11 +1,3 @@
-// {
-//   "author": "<author_name>",
-//   "content": "<comment_content>"
-// }
-
-// import API from './api';
-
-
 import axios from "axios";
 
 export const getPosts = () => axios.get(`/posts/`);
