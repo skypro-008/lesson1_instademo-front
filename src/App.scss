@@ -1,13 +1,5 @@
 .App {
   display: flex;
   justify-content: center;
-
-  &__loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 576px;
-    background: #F7F7F9;
-    border-radius: 4px;
-  }
+  background: #fafafa;
 }

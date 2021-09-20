@@ -1,9 +1,11 @@
 .Post-description {
   display: flex;
   flex-flow: row nowrap;
+  margin-bottom: 16px;
   font-size: 18px;
 
   &__text {
+    margin: 0;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -16,6 +18,7 @@
   }
 
   &__show-full {
+    margin: 0;
     color: #8c8c8c;
     cursor: pointer;
   }

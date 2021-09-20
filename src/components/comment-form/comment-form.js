@@ -9,17 +9,22 @@ export const CommentForm = ({ onSubmit, onClose }) => (
   <Form className={cn(CLASS_NAME)} onFinish={onSubmit}>
     <Form.Item
       name="author"
-      rules={[{ required: true, message: 'Please input your username!' }]}
+      rules={[{ required: true, message: 'Это поле обязательное' }]}
+      className={cn(`${CLASS_NAME}__form-item`)}
     >
       <Input placeholder="Ваше имя" />
     </Form.Item>
 
-    <Form.Item name="content">
+    <Form.Item
+      name="content"
+      rules={[{ required: true, message: 'Это поле обязательное' }]}
+      className={cn(`${CLASS_NAME}__form-item`)}
+    >
       <Input.TextArea placeholder="Ваш комментарий" />
     </Form.Item>
 
-    <Form.Item>
-      <Button type="primary" htmlType="submit">
+    <Form.Item className={cn(`${CLASS_NAME}__form-item`)}>
+      <Button type="default" htmlType="submit">
         Отправить
       </Button>
 

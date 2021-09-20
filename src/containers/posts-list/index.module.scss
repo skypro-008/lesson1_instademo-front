@@ -1,0 +1,16 @@
+.Posts-list {
+  &__loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 576px;
+    margin-top: 36px;
+    background: #F7F7F9;
+    border-radius: 4px;
+  }
+
+  &__posts-list {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
