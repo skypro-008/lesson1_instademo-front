@@ -1,9 +1,8 @@
-import './App.scss';
 import { Header } from './components/header';
 import { Layout } from './components/layout';
+import { PostsList } from './containers/posts-list';
 import classnames from 'classnames/bind';
 import styles from './App.scss';
-import { PostsList } from './containers/posts-list';
 
 const CLASS_NAME = 'App';
 const cn = classnames.bind(styles);

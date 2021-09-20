@@ -1,4 +1,4 @@
-import { Post } from '../../components/post';
+import { Post } from '../post';
 import { useEffect, useState } from 'react';
 import { getPosts } from '../../api/posts';
 import { Spin } from 'antd';

@@ -1,12 +1,12 @@
-import { User } from '../user';
+import { User } from '../../components/user';
 import classnames from 'classnames/bind';
 import styles from './index.module.scss';
 import { HeartOutlined, MessageOutlined } from '@ant-design/icons';
-import { Comment } from '../comment';
-import { CommentForm } from '../comment-form/comment-form';
+import { Comment } from '../../components/comment';
+import { CommentForm } from '../../components/comment-form/comment-form';
 import { addComment, getComments, like } from '../../api/posts';
 import { useState } from 'react';
-import { PostDescription } from '../post-description';
+import { PostDescription } from '../../components/post-description';
 
 const CLASS_NAME = 'Post';
 const cn = classnames.bind(styles);
