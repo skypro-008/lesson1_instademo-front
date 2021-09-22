@@ -1,12 +1,12 @@
-import axios from "axios";
+import API from './api';
 
-export const getPosts = () => axios.get(`/posts/`);
+export const getPosts = () => API.get(`/posts/`);
 
-export const like = (id) => axios.post(`/posts/${id}/like/`);
+export const like = (id) => API.post(`/posts/${id}/like/`);
 
-export const dislike = (id) => axios.post(`/posts/${id}/dislike/`);
+export const dislike = (id) => API.post(`/posts/${id}/dislike/`);
 
-export const getComments = (id) => axios.get(`/posts/${id}/comments/`);
+export const getComments = (id) => API.get(`/posts/${id}/comments/`);
 
-export const addComment = (id, data) => axios.post(`/posts/${id}/comments/`, data);
+export const addComment = (id, data) => API.post(`/posts/${id}/comments/`, data);
 

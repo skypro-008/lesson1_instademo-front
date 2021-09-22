@@ -22,7 +22,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "https://skypro-flask.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",
